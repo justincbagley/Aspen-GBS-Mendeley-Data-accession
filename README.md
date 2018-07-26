@@ -159,8 +159,12 @@ Current directory tree structure:
 
 Graphical representations of the file tree structure:
 
+Screenshot 1:
+
 ![Top file tree structure for this repository](top_file_tree.png)
 <!-- <p align="left"><img src="top_file_tree.png"></img></p> -->
+
+Screenshot 2 - Calibration_Areas substructure: 
 
 ![Calibration Areas file tree substructure](file_tree_CalibAreas.png)
 <!-- <p align="left"><img src="file_tree_CalibAreas.png"></img></p> -->
