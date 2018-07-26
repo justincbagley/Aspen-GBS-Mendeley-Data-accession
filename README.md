@@ -157,10 +157,14 @@ Current directory tree structure:
       |-- script1A_climScenarios2Grd.R
 ```
 
-Graphical representation of the file tree structure:
+Graphical representations of the file tree structure:
 
-<!-- ![file tree structure for this repository]('./file_tree_structure.pdf') -->
-<p align="left"><img src="file_tree_structure.png"></img></p>
+![Top file tree structure for this repository]('top_file_tree.png')
+<!-- <p align="left"><img src="top_file_tree.png"></img></p> -->
+
+![Calibration Areas file tree substructure]('file_tree_CalibAreas.png')
+<!-- <p align="left"><img src="file_tree_CalibAreas.png"></img></p> -->
+
 
 
 ## PIPELINE OVERVIEW
