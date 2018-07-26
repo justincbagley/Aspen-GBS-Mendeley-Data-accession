@@ -160,7 +160,7 @@ Current directory tree structure:
 Graphical representation of the file tree structure:
 
 <!-- ![file tree structure for this repository]('./file_tree_structure.pdf') -->
-<p align="left"><img src="file_tree_structure.pdf"></img></p>
+<p align="left"><img src="file_tree_structure.png"></img></p>
 
 
 ## PIPELINE OVERVIEW
