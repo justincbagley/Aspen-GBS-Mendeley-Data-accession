@@ -194,8 +194,14 @@ After running the TASSEL-GBSv2 pipeline as described in the text and the [SNP Di
 
 ## ENM PIPELINE OVERVIEW
 
-The ENM analyses essentially focused on running ```ENMeval``` (Muscarella et al. 2014) and ```MaxEnt``` (Phillips et al. 2006) from within the ```R``` environment, using the wrapper software package ```ENMwizard``` (Heming et al. 2018).
+The ENM analyses essentially focused on running ```ENMeval``` (Muscarella et al. 2014) and ```MaxEnt``` (Phillips et al. 2006) from within the ```R``` environment, using the wrapper software package ```ENMwizard``` (Heming et al. 2018), as described in the main text. As shown in the file tree [above](#contents), the ENM analyses were run using four Rscripts:
 
+- script1A_climScenarios2Grd.R
+- script1B_dataPrep-ENMAnalysis.R
+- script2_cluster_dataPrep-ENMAnalysis.R
+- script3_manuscriptFigures.R
+
+These Rscripts take as input various GIS files (links provided within the script; descriptions in the main text, e.g. Table 1) and the _P. tremuloides_ occurrence data, and together they output all of the ENM model selection results, model parameters, calibration area shapefiles, maps of model output and projections across different climatic scenarios, and other files in the ENM folders of this accession. Moreover, they are meant to be run in numerically increasing order--first the 'script1A*' file, then 'script1B*' file, and so on, to the final 'script3*' file. Interested users can run them in this order on the data files to replicate our full ENM analysis.
 
 ## REFERENCES
 
@@ -206,6 +212,4 @@ The ENM analyses essentially focused on running ```ENMeval``` (Muscarella et al.
 - Li, H., & Durbin, R. (2009). Fast and accurate short read alignment with Burrows-Wheeler transform. _Bioinformatics_, 25(14), 1754–1760.
 - Muscarella, R., Galante, P. J., Soley-Guardia, M., Boria, R. A., Kass, J. M., Uriarte, M., & Anderson, R. P. (2014). ENMeval: an R package for conducting spatially independent evaluations and estimating optimal model complexity for MAXENT ecological niche models. _Methods in Ecology and Evolution_, 5, 1198–1205.
 - Phillips, S. J., Anderson, R. P., & Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. _Ecological Modelling_, 190, 231–259.
-
-
 
