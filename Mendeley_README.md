@@ -196,7 +196,7 @@ After running the TASSEL-GBSv2 pipeline as described in the text and the [SNP Di
 
 ### General Structure and Occurrence Data Files
 
-As described in the main text, the ENM analyses essentially focused on running ```ENMeval``` (Muscarella et al. 2014) and ```MaxEnt``` (Phillips et al. 2006) from within the ```R``` environment, using controls and automation functions available in the wrapper software package ```ENMwizard``` (Heming et al. 2018). For more information and the latest release of ```ENMwizard```, see the corresponding [GitHub repository](https://github.com/HemingNM/ENMwizard). Our ENM analysis pipeline started from an excellent, large set of unfiltered _P. tremuloides_ occurrence records (>100,000 records), which we used the ```spThin``` package to filter down to ~14,000 records in the final 'filtered' dataset. Both the unfiltered and filtered occurrence records files are included in this accession. As shown in the file tree [above](#contents), the unfiltered vs filtered occurrences files are included within the 'Occurrence_Data_Files' subdirectory and are named 'Ptrem_Merged_records__NOT-filtered.csv' and 'Ptrem_Merged_records_spThin.filtered.csv', respectively. 
+As described in the main text, the ENM analyses essentially focused on running ```ENMeval``` (Muscarella et al. 2014) and ```MaxEnt``` (Phillips et al. 2006) from within the ```R``` environment, using controls and automation functions available in the wrapper software package ```ENMwizard``` (Heming et al. 2018). For more information and the latest release of ```ENMwizard```, see the corresponding [GitHub repository](https://github.com/HemingNM/ENMwizard). Our ENM analysis pipeline started from an excellent, large set of unfiltered _P. tremuloides_ occurrence records (>100,000 records), which we used the ```spThin``` package (Aiello-Lammens et al. 2015) to filter down to ~14,000 records in the final 'filtered' dataset. Both the unfiltered and filtered occurrence records files are included in this accession. As shown in the file tree [above](#contents), the unfiltered vs filtered occurrences files are included within the 'Occurrence_Data_Files' subdirectory and are named 'Ptrem_Merged_records__NOT-filtered.csv' and 'Ptrem_Merged_records_spThin.filtered.csv', respectively. 
 
 ### Pipeline Files
 
@@ -213,6 +213,7 @@ Within this accession, we have organized the output from these Rscripts into two
 
 ## REFERENCES
 
+- Aiello-Lammens, M. E., Boria, R. A., Radosavljevic, A., Vilela, B., & Anderson, R. P. (2015). spThin: an R package for spatial thinning of species occurrence records for use in ecological niche models. _Ecography_, 38, 541–545.
 - Bagley, J. C., Gutiérrez, E. E., Heming, N. M., Cronn, R., Devisetty, U. K., Mock, K. E., Eckert, A. J., & Strauss, S. H. (in review). Genotyping-by-sequencing and ecological niche modeling illuminate phylogeography, admixture, and Pleistocene range dynamics in quaking aspen (_Populus tremuloides_). _Molecular Ecology_.
 - Goudet, J. (2005). Hierfstat, a package for R to compute and test hierarchical F-statistics. _Molecular Ecology Resources_, 5(1), 184–186.
 - Heming, N. M., Dambros, C., & Gutiérrez, E. E. (2018). ENMwizard: AIC model averaging and other advanced techniques in Ecological Niche Modeling made easy. R package version 0.1.7. Accessed at <https://github.com/HemingNM/ENMwizard>.
