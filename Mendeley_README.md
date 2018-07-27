@@ -164,7 +164,9 @@ Text representation of the current directory file tree structure of the accessio
 
 Within the SNP_Discovery_Pipeline [folder](#contents) of the accession, there are two subdirectories corresponding to the two independent runs of the pipeline discussed in the main text (other runs were conducted varying the different parameters available at different steps of the pipeline, but are not presented; JCB, unpublished results). The 'final' folder contains reusults of the final reference assembly-based run from which production SNPs were filtered and used in our final population genomic and phylogenomic analyses presented in the paper. The 'noTReps' folder corresponds to the no-technical-replicates run mentioned in the main text and Appendix S1 of the Supporting Information. Each folder contains the shell script to run the pipeline, as well as the key file for TASSEL-GBSv2. As noted in the pipeline [documentation](https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/GBSSeqToTagDBPlugin), the key file is the "file listing barcodes distinguishing the samples (REQUIRED)", and thus links barcodes to sample names and other metadata. The pipelines for the different runs are largely the same; the main difference between them is the key files, with the noTReps key file omitting barcodes and IDs corresponding to technical replicates from Schilling et al.'s (2014) GBS dataset (lanes).
 
-The raw data were too large (>100GB) to be included in this accession due to space limitations. However, the data are available through means listed in the Data Accessibility section of the main text. Other than installing dependencies ([TASSEL-GBSv2](https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline) and [bwa](https://github.com/lh3/bwa/), etc.) and using a LINUX supercomputer, all that is required to replicate our runs of this pipeline is to format the raw data in '\*.fastq.gz' or '\*.fastq.txt.gz' format described in the documentation. Our final raw data files were named by lane/plate as described in the key files, and were moved to the following relative paths (within each run folder) on our Linux-based supercomputing cluster at the [Virginia Commonwealth University (CHiPC)](https://chipc.vcu.edu) facility:
+The raw data were too large (>100GB) to be included in this accession due to space limitations. However, the data are available through means listed in the Data Accessibility section of the main text. 
+
+Other than installing dependencies ([TASSEL-GBSv2](https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline) and [bwa](https://github.com/lh3/bwa/), etc.), using a LINUX supercomputer, and following the official documentation for the pipeline, all that is required to replicate our runs of this pipeline is to format the raw data in '\*.fastq.gz' or '\*.fastq.txt.gz' format described in the documentation aand run the pipeline. Our final raw data files were named by lane/plate as described in the key files, and were moved to the following relative paths (within each run folder) on our Linux-based supercomputing cluster at the [Virginia Commonwealth University (CHiPC)](https://chipc.vcu.edu) facility:
 
 ```
 ./fastq/AXXXXXXXXX_1_fastq.txt.gz
@@ -174,7 +176,7 @@ The raw data were too large (>100GB) to be included in this accession due to spa
 
 ## SNP VARIANT AND GENOTYPE FILE OVERVIEW
 
-[In prep.]
+After running the TASSEL-GBSv2 pipeline as describec above, we obtained variant call format (VCF) files containing the raw production SNP calls output from the pipeline's ProductionSNPCallerPluginV2 plugin.
 
 
 ## ENM PIPELINE OVERVIEW
