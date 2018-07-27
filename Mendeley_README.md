@@ -200,7 +200,7 @@ As described in the main text, the ENM analyses essentially focused on running `
 
 ### Pipeline Files
 
-Subsequent ENM analyses were run in ```R``` v3.5.0 on MacBook computers running macOS High Sierra using the four Rscripts [above](#contents), which were prepared by NMH and EEG and modified by JCB, as follows:
+Subsequent ENM analyses were run in ```R``` v3.5.0 (available [here](https://cran.r-project.org)) on MacBook computers running macOS High Sierra using the four Rscripts [above](#contents), which were prepared by NMH and EEG and modified by JCB, as follows:
 
 - script1A_climScenarios2Grd.R
 - script1B_dataPrep-ENMAnalysis.R
