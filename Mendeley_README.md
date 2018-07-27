@@ -194,7 +194,13 @@ After running the TASSEL-GBSv2 pipeline as described in the text and the [SNP Di
 
 ## ENM PIPELINE OVERVIEW
 
-As described in the main text, the ENM analyses essentially focused on running ```ENMeval``` (Muscarella et al. 2014) and ```MaxEnt``` (Phillips et al. 2006) from within the ```R``` environment, using controls and automation functions available in the wrapper software package ```ENMwizard``` (Heming et al. 2018). For more information and the latest release of ```ENMwizard```, see the corresponding [GitHub repository](https://github.com/HemingNM/ENMwizard). Our ENM analysis pipeline started from an excellent, large set of unfiltered _P. tremuloides_ occurrence records (>100,000 records), which we used the ```spThin``` package to filter down to ~14,000 records in the final 'filtered' dataset. Both the unfiltered and filtered occurrence records files are included in this accession. As shown in the file tree [above](#contents), the unfiltered vs filtered occurrences files are included within the 'Occurrence_Data_Files' subdirectory and are named 'Ptrem_Merged_records__NOT-filtered.csv' and 'Ptrem_Merged_records_spThin.filtered.csv', respectively. Our ENM analyses were run using four Rscripts [above](#contents), prepared by NMH and EEG and modified by JCB, as follows:
+### General Structure and Occurrence Data Files
+
+As described in the main text, the ENM analyses essentially focused on running ```ENMeval``` (Muscarella et al. 2014) and ```MaxEnt``` (Phillips et al. 2006) from within the ```R``` environment, using controls and automation functions available in the wrapper software package ```ENMwizard``` (Heming et al. 2018). For more information and the latest release of ```ENMwizard```, see the corresponding [GitHub repository](https://github.com/HemingNM/ENMwizard). Our ENM analysis pipeline started from an excellent, large set of unfiltered _P. tremuloides_ occurrence records (>100,000 records), which we used the ```spThin``` package to filter down to ~14,000 records in the final 'filtered' dataset. Both the unfiltered and filtered occurrence records files are included in this accession. As shown in the file tree [above](#contents), the unfiltered vs filtered occurrences files are included within the 'Occurrence_Data_Files' subdirectory and are named 'Ptrem_Merged_records__NOT-filtered.csv' and 'Ptrem_Merged_records_spThin.filtered.csv', respectively. 
+
+### Pipeline Files
+
+Subsequent ENM analyses were run using the four Rscripts [above](#contents), which were prepared by NMH and EEG and modified by JCB, as follows:
 
 - script1A_climScenarios2Grd.R
 - script1B_dataPrep-ENMAnalysis.R
