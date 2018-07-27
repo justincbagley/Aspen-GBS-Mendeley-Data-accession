@@ -87,6 +87,10 @@ Text representation of the current directory file tree structure of the accessio
 |   |-- ref_1_2_finalProductionSNPs.vcf.gz
 |   |-- AspenSNPs.33.5K_n183.vcf.gz
 |
+|- Occurrence_Data_Files
+|   |-- Ptrem_Merged_records_spThin.filtered.csv
+|   |-- Ptrem_Merged_records__NOT-filtered.csv
+|
 |- ENM_Results
 |   |-- species_RESULTS
 |   |   |-- totalArea.aspen.csv
