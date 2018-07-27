@@ -59,7 +59,7 @@ In support of the manuscript by Bagley et al. (in review) on quaking aspen phylo
 <!--and is also visually depicted with figures showing the directory structure -->
 under [CONTENTS](#contents) below.
 
-Users interested in GBS pipelines can see how we ran TASSEL-GBSv2, including changes to the default parameters and ways that calls to the Burrows-Wheeler alignment tool bwa (Li &  Durbin 2009) were incorporated into the workflow. Anyone with facility in population genetics and analysis of current population genomic data will be able to quickly use the final SNP dataset, e.g. to check SNPs or experiment with different filtering strategies, or use the genotype files to conduct population genetic analyses in ```R``` packages mentioned in the Materials and Methods section of the paper (Bagley et al. in review) or other software.
+Users interested in GBS pipelines can see how we ran [TASSEL-GBSv2](https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline), including changes to the default parameters and ways that calls to the Burrows-Wheeler alignment tool [bwa](https://github.com/lh3/bwa/releases) (Li &  Durbin 2009) were incorporated into the workflow. Anyone with facility in population genetics and analysis of current population genomic data will be able to quickly use the final SNP dataset, e.g. to check SNPs or experiment with different filtering strategies, or use the genotype files to conduct population genetic analyses in ```R``` packages mentioned in the Materials and Methods section of the paper (Bagley et al. in review) or other software.
 
 In this README, we list the files and analysis scripts contained within this accession, we briefly describe the genomic data files provided, and we briefly explain how ENM Rscripts herein were strung together in a pipeline workflow suitable for UNIX-like environments with recent R and MaxEnt installs.
 
@@ -164,10 +164,17 @@ Current directory tree structure:
 ```
 
 
-## TASSEL-GBSv2 PIPELINE CODE
+## TASSEL-GBSv2 SNP DISCOVERY PIPELINE CODE
 
-[In prep.]
+Within the SNP_Discovery_Pipeline [folder](#contents) of the accession, there are two subdirectories corresponding to the two independent runs of the pipeline discussed in the main text (other runs were conducted varying the different parameters available at different steps of the pipeline, but are not presented; JCB, unpublished results). The 'final' folder contains reusults of the final reference assembly-based run from which production SNPs were filtered and used in our final population genomic and phylogenomic analyses presented in the paper. The 'noTReps' folder corresponds to the no-technical-replicates run mentioned in the main text and Appendix S1 of the Supporting Information. Each folder contains the shell script to run the pipeline, as well as the key file for TASSEL-GBSv2. As noted in the pipeline [documentation](https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/GBSSeqToTagDBPlugin), the key file is the "file listing barcodes distinguishing the samples (REQUIRED)", and thus links barcodes to sample names and other metadata. The pipelines for the different runs are largely the same; the main difference between them is the key files, with the noTReps key file omitting barcodes and IDs corresponding to technical replicates from Schilling et al.'s (2014) GBS dataset (lanes).
 
+The raw data were too large (>100GB) to be included in this accession due to space limitations. However, the data are available through means listed in the Data Accessibility section of the main text. Other than installing dependencies ([TASSEL-GBSv2](https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline) and [bwa](https://github.com/lh3/bwa/), etc.) and using a LINUX supercomputer, all that is required to replicate our runs of this pipeline is to format the raw data in '\*.fastq.gz' or '\*.fastq.txt.gz' format described in the documentation. Our final raw data files were named by lane/plate as described in the key files, and were moved to the following relative paths (within each run folder) on our Linux-based supercomputing cluster at the [Virginia Commonwealth University (CHiPC)](https://chipc.vcu.edu) facility:
+
+```
+./fastq/AXXXXXXXXX_1_fastq.txt.gz
+./fastq/AXXXXXXXXX_2_fastq.txt.gz
+./fastq/AH353KBBXX_8_fastq.txt.gz
+```
 
 ## SNP VARIANT AND GENOTYPE FILE OVERVIEW
 
