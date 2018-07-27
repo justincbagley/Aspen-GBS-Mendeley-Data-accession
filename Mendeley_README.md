@@ -44,28 +44,22 @@ manuscript:
 
 - http://dx.doi.org/10.17632/jhkhvdgyfy.1
 
+<!-- If you use code or data herein prior to the publication of our paper, then please also consider
+citing our preprint:
+Bagley, J. C., Gutiérrez, E. E., Heming, N. M., Cronn, R., Devisetty, U. K., Mock, K. E., Eckert, A. J., & Strauss, S. H. (2018). Genotyping-by-sequencing and ecological niche modeling illuminate phylogeography, admixture, and Pleistocene range dynamics in quaking aspen (_Populus tremuloides_). _PeerJ PrePrints_, XXXX.
+-->
+
 ## DOI
 
 The DOI for this accession is as follows: doi:[10.17632/jhkhvdgyfy.1](http://dx.doi.org/10.17632/jhkhvdgyfy.1). The CITATION section above illustrates how to cite this code using the DOI.
 
 ## INTRODUCTION
 
-In support of the manuscript by Bagley et al. (in review) on quaking aspen phylogeography 
-and ecological niche modeling (ENM), this accession dataset provides 1) SNP variant and genotype 
-data files used during our genomic analyses, and 2) raw data files and computer code used 
-during our ENM analyses. A list of the contents of this accession is given below in text 
-format, and also visually depicted with a figure showing the full file tree structure.
+In support of the manuscript by Bagley et al. (in review) on quaking aspen phylogeography and ecological niche modeling (ENM), this accession dataset provides 1) code used to conduct two independent runs of the TASSEL-GBSv2 SNP discovery pipeline (Glaubitz et al. 2014) on our final (combined) genotyping-by-sequencing (GBS) dataset; 2) resulting SNP variant files from TASSEL-GBSv2 and final genotype data files used during our genomic analyses; and 3) species occurrence data files and computer code used during our ENM analyses of our focal taxon, Populus tremuloides. A list of the contents of this accession is given below in text format and is also visually depicted with figures showing the directory structure under [CONTENTS](#contents) below.
 
-Anyone with facility in population genetics and modern analysis of population genomic data 
-will be able to quickly use the raw SNP data, e.g. to check SNPs or experiment with different 
-filtering strategies, or use the genotype files to conduct population genetic analyses in 
-```R``` packages mentioned in the Materials and Methods section of the paper (Bagley et al. 
-in review) or other software.
+Users interested in GBS pipelines can see how we ran TASSEL-GBSv2, including changes to the default parameters and ways that calls to the Burrows-Wheeler alignment tool bwa (Li &  Durbin 2009) were incorporated into the workflow. Anyone with facility in population genetics and analysis of current population genomic data will be able to quickly use the final SNP dataset, e.g. to check SNPs or experiment with different filtering strategies, or use the genotype files to conduct population genetic analyses in ```R``` packages mentioned in the Materials and Methods section of the paper (Bagley et al. in review) or other software.
 
-In this README, we list the files and analysis scripts contained within this accession, 
-we briefly describe the genomic data files provided, and we briefly explain how ENM Rscripts 
-herein were strung together in a pipeline workflow suitable for UNIX-like environments with
-recent R and MaxEnt installs.
+In this README, we list the files and analysis scripts contained within this accession, we briefly describe the genomic data files provided, and we briefly explain how ENM Rscripts herein were strung together in a pipeline workflow suitable for UNIX-like environments with recent R and MaxEnt installs.
 
 
 ## CONTENTS
@@ -170,6 +164,11 @@ Screenshot 2 - Calibration_Areas substructure:
 <p align="left"><img src="file_tree_CalibAreas.png" alt="Calibration Areas file tree substructure" width="450px"></img></p>
 
 
+## TASSEL-GBSv2 PIPELINE CODE
+
+[In prep.]
+
+
 ## SNP VARIANT AND GENOTYPE FILE OVERVIEW
 
 [In prep.]
@@ -190,6 +189,7 @@ Screenshot 2 - Calibration_Areas substructure:
 - Goudet, J. (2005). Hierfstat, a package for R to compute and test hierarchical F-statistics. _Molecular Ecology Resources_, 5(1), 184–186.
 - Jombart, T., & Ahmed, I. (2011). Adegenet 1.3-1: new tools for the analysis of genome-wide SNP data. _Bioinformatics_, 27, 3070–3071.
 - Muscarella, R., Galante, P. J., Soley-Guardia, M., Boria, R. A., Kass, J. M., Uriarte, M., & Anderson, R. P. (2014). ENMeval: an R package for conducting spatially independent evaluations and estimating optimal model complexity for MAXENT ecological niche models. _Methods in Ecology and Evolution_, 5, 1198–1205.
+- Li, H., & Durbin, R. (2009). Fast and accurate short read alignment with Burrows-Wheeler transform. _Bioinformatics_, 25(14), 1754–1760.
 
 
 
