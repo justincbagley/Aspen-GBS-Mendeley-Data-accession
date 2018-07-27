@@ -176,8 +176,7 @@ Other than installing dependencies ([TASSEL-GBSv2](https://bitbucket.org/tassela
 
 ## SNP VARIANT AND GENOTYPE FILE OVERVIEW
 
-After running the TASSEL-GBSv2 pipeline as describec above, we obtained variant call format (VCF) files containing the raw production SNP calls output from the pipeline's ProductionSNPCallerPluginV2 plugin.
-
+After running the TASSEL-GBSv2 pipeline as described in the text and the [SNP Discovery Pipeline](#tassel-gbsv2-snp-discovery-pipeline-code) section above, we obtained variant call format (VCF) files 'ref_1_2_finalProductionSNPs.vcf.gz' (final run) and 'ref_3_noTReps_finalProductionSNPs.vcf.gz' (noTReps run) containing the raw production SNP calls output from the pipeline's ProductionSNPCallerPluginV2 plugin. We then filtered these files using vcftools and filtering parameters discussed in the Materials and Methods section of the main text. The resulting filtered VCF file from the final run was then used as the starting point for subsequent analyses. Prior to analysis in ```R```, the data were converted to genotype formats readable by R software.
 
 ## ENM PIPELINE OVERVIEW
 
