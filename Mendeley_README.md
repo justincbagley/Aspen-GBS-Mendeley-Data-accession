@@ -55,7 +55,9 @@ The DOI for this accession is as follows: doi:[10.17632/jhkhvdgyfy.1](http://dx.
 
 ## INTRODUCTION
 
-In support of the manuscript by Bagley et al. (in review) on quaking aspen phylogeography and ecological niche modeling (ENM), this accession dataset provides 1) code used to conduct two independent runs of the TASSEL-GBSv2 SNP discovery pipeline (Glaubitz et al. 2014) on our final (combined) genotyping-by-sequencing (GBS) dataset; 2) resulting SNP variant files from TASSEL-GBSv2 and final genotype data files used during our genomic analyses; and 3) species occurrence data files and computer code used during our ENM analyses of our focal taxon, Populus tremuloides. A list of the contents of this accession is given below in text format and is also visually depicted with figures showing the directory structure under [CONTENTS](#contents) below.
+In support of the manuscript by Bagley et al. (in review) on quaking aspen phylogeography and ecological niche modeling (ENM), this accession dataset provides 1) code used to conduct two independent runs of the TASSEL-GBSv2 SNP discovery pipeline (Glaubitz et al. 2014) on our final (combined) genotyping-by-sequencing (GBS) dataset; 2) resulting SNP variant files from TASSEL-GBSv2 and final genotype data files used during our genomic analyses; and 3) species occurrence data files and computer code used during our ENM analyses of our focal taxon, Populus tremuloides. A file tree list of the contents of this accession is given in text format 
+<!--and is also visually depicted with figures showing the directory structure -->
+under [CONTENTS](#contents) below.
 
 Users interested in GBS pipelines can see how we ran TASSEL-GBSv2, including changes to the default parameters and ways that calls to the Burrows-Wheeler alignment tool bwa (Li &  Durbin 2009) were incorporated into the workflow. Anyone with facility in population genetics and analysis of current population genomic data will be able to quickly use the final SNP dataset, e.g. to check SNPs or experiment with different filtering strategies, or use the genotype files to conduct population genetic analyses in ```R``` packages mentioned in the Materials and Methods section of the paper (Bagley et al. in review) or other software.
 
@@ -73,6 +75,16 @@ Current directory tree structure:
 
 /
 |
+|
+|
+|- SNP_Discovery_Pipeline
+|   |-- final_run
+|   |   |-- final_TASSEL-GBSv2_pipeline.sh
+|   |   |-- Mock-Strauss_key_file.txt
+|   |   
+|   |- noTReps_run
+|      |-- noTReps_TASSEL-GBSv2_pipeline.sh
+|      |-- Mock-Strauss_key_file.txt
 |
 |- ENM_Results
 |   |-- species_RESULTS
@@ -150,18 +162,6 @@ Current directory tree structure:
       |-- script3_manuscriptFigures.R
       |-- script1A_climScenarios2Grd.R
 ```
-
-Graphical representations of the file tree structure:
-
-Screenshot 1:
-
-<!-- ![Top file tree structure for this accession](top_file_tree.png =300x) -->
-<p align="left"><img src="top_file_tree.png" alt="Top file tree structure for this accession" width="450px"></img></p>
-
-Screenshot 2 - Calibration_Areas substructure: 
-
-<!-- ![Calibration Areas file tree substructure](file_tree_CalibAreas.png =300x) -->
-<p align="left"><img src="file_tree_CalibAreas.png" alt="Calibration Areas file tree substructure" width="450px"></img></p>
 
 
 ## TASSEL-GBSv2 PIPELINE CODE
