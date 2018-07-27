@@ -82,6 +82,10 @@ Text representation of the current directory file tree structure of the accessio
 |      |-- noTReps_TASSEL-GBSv2_pipeline.sh
 |      |-- Mock-Strauss_key_file.txt
 |
+|- SNP_VCF_Data_Files
+|   |-- ref_3_noTReps_finalProductionSNPs.vcf.gz
+|   |-- ref_1_2_finalProductionSNPs.vcf.gz
+|
 |- ENM_Results
 |   |-- species_RESULTS
 |   |   |-- totalArea.aspen.csv
