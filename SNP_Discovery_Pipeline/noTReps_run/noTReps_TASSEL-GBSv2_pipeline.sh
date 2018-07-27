@@ -1,7 +1,8 @@
 #!/bin/sh
 
-## July 20, 2018 run w/ default kmerLength, mnLCov, and mnMAF, mnQS 10, and NO technical
-## replicates (i.e. with 45 technical replicates in Mock plates REMOVED from the key file)
+## July 20, 2018 run w/ default kmerLength, mnLCov, and mnMAF; changed default mnQS of 0 to
+## value of 10; and NO technical replicates (i.e. with 45 technical replicates in Mock 
+## plates REMOVED from the key file)
 
 qrsh -N TASSEL -pe smp 5
 

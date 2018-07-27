@@ -1,12 +1,12 @@
 #!/bin/sh
 
-## July 20, 2018 run w/ default kmerLength, mnLCov, and mnMAF, mnQS 10, and NO technical
-## replicates (i.e. with 45 technical replicates in Mock plates REMOVED from the key file)
+## July 20, 2018 run w/ default kmerLength, mnLCov, and mnMAF; changed default mnQS of 0 to
+## value of 10
 
 qrsh -N TASSEL -pe smp 5
 
 ###### WORKING DIRECTORY:
-cd /gpfs_fs/home/jcbagley/compute/Aspen_Project/SNP_data/Mock-Strauss_TASSEL-GBSv2_ref_3_noTReps/
+cd /gpfs_fs/home/jcbagley/compute/Aspen_Project/SNP_data/Mock-Strauss_TASSEL-GBSv2_ref_1_2/
 
 
 ###### SETUP:
