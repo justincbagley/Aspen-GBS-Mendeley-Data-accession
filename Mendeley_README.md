@@ -68,14 +68,10 @@ In this README, we list the files and analysis scripts contained within this acc
 
 **Scripts and other files contained in this accession.**
 
-Text representation of the file tree structure of the accession:
+Text representation of the current directory file tree structure of the accession:
 
 ```
-Current directory tree structure:
-
 /
-|
-|
 |
 |- SNP_Discovery_Pipeline
 |   |-- final_run
