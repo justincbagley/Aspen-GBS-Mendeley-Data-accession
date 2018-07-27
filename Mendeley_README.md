@@ -171,12 +171,21 @@ Within the SNP_Discovery_Pipeline [folder](#contents) of the accession, there ar
 
 The raw data were too large (>100GB) to be included in this accession due to space limitations. However, the data are available through means listed in the Data Accessibility section of the main text. 
 
-Other than installing dependencies ([TASSEL-GBSv2](https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline) and [bwa](https://github.com/lh3/bwa/), etc.), using a LINUX supercomputer, and following the official documentation for the pipeline, all that is required to replicate our runs of this pipeline is to format the raw data in '\*.fastq.gz' or '\*.fastq.txt.gz' format described in the documentation aand run the pipeline. Our final raw data files were named by lane/plate as described in the key files, and were moved to the following relative paths (within each run folder) on our Linux-based supercomputing cluster at the [Virginia Commonwealth University (CHiPC)](https://chipc.vcu.edu) facility:
+Other than installing dependencies ([TASSEL-GBSv2](https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline) and [bwa](https://github.com/lh3/bwa/), etc.), using a LINUX supercomputer, and following the official documentation for the pipeline, all that is required to replicate our runs of this pipeline is to format the raw data in '\*.fastq.gz' or '\*.fastq.txt.gz' format described in the documentation aand run the pipeline. Our final raw data files were named by lanes/plates described in the key files, and were moved to the fastq/ subdirectory in each run folder on our Linux-based supercomputing cluster at the [Virginia Commonwealth University (CHiPC)](https://chipc.vcu.edu) facility. The final gzipped raw fastq files had the following names and sizes:
 
 ```
-./fastq/AXXXXXXXXX_1_fastq.txt.gz
-./fastq/AXXXXXXXXX_2_fastq.txt.gz
-./fastq/AH353KBBXX_8_fastq.txt.gz
+$ ## Run within final run folder:
+$ cd fastq/
+$ ls *.gz
+./AXXXXXXXXX_1_fastq.txt.gz
+./AXXXXXXXXX_2_fastq.txt.gz
+./AH353KBBXX_8_fastq.txt.gz
+$
+$ ll
+total 63221504
+-rw-rw-r-- 1 jcbagley jcbagley 32896418130 Jul 22 11:16 AH353KBBXX_8_fastq.txt.gz
+-rw------- 1 jcbagley jcbagley 18436171873 Jul 22 11:18 AXXXXXXXXX_1_fastq.txt.gz
+-rw------- 1 jcbagley jcbagley 13406144516 Jul 22 11:17 AXXXXXXXXX_2_fastq.txt.gz
 ```
 
 ## SNP VARIANT AND GENOTYPE FILE OVERVIEW
@@ -185,7 +194,7 @@ After running the TASSEL-GBSv2 pipeline as described in the text and the [SNP Di
 
 ## ENM PIPELINE OVERVIEW
 
-[In prep.]
+The ENM analyses essentially focused on running ```ENMeval``` (Muscarella et al. 2014) and ```MaxEnt``` (Phillips et al. 2006) from within the ```R``` environment, using the wrapper software package ```ENMwizard``` (Heming et al. 2018).
 
 
 ## REFERENCES
@@ -193,9 +202,9 @@ After running the TASSEL-GBSv2 pipeline as described in the text and the [SNP Di
 - Bagley, J. C., Gutiérrez, E. E., Heming, N. M., Cronn, R., Devisetty, U. K., Mock, K. E., Eckert, A. J., & Strauss, S. H. (in review). Genotyping-by-sequencing and ecological niche modeling illuminate phylogeography, admixture, and Pleistocene range dynamics in quaking aspen (_Populus tremuloides_). _Molecular Ecology_.
 - Goudet, J. (2005). Hierfstat, a package for R to compute and test hierarchical F-statistics. _Molecular Ecology Resources_, 5(1), 184–186.
 - Jombart, T., & Ahmed, I. (2011). Adegenet 1.3-1: new tools for the analysis of genome-wide SNP data. _Bioinformatics_, 27, 3070–3071.
-- Muscarella, R., Galante, P. J., Soley-Guardia, M., Boria, R. A., Kass, J. M., Uriarte, M., & Anderson, R. P. (2014). ENMeval: an R package for conducting spatially independent evaluations and estimating optimal model complexity for MAXENT ecological niche models. _Methods in Ecology and Evolution_, 5, 1198–1205.
 - Li, H., & Durbin, R. (2009). Fast and accurate short read alignment with Burrows-Wheeler transform. _Bioinformatics_, 25(14), 1754–1760.
-
+- Muscarella, R., Galante, P. J., Soley-Guardia, M., Boria, R. A., Kass, J. M., Uriarte, M., & Anderson, R. P. (2014). ENMeval: an R package for conducting spatially independent evaluations and estimating optimal model complexity for MAXENT ecological niche models. _Methods in Ecology and Evolution_, 5, 1198–1205.
+- Phillips, S. J., Anderson, R. P., & Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. _Ecological Modelling_, 190, 231–259.
 
 
 
