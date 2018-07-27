@@ -85,6 +85,7 @@ Text representation of the current directory file tree structure of the accessio
 |- SNP_VCF_Data_Files
 |   |-- ref_3_noTReps_finalProductionSNPs.vcf.gz
 |   |-- ref_1_2_finalProductionSNPs.vcf.gz
+|   |-- AspenSNPs.33.5K_n183.vcf.gz
 |
 |- ENM_Results
 |   |-- species_RESULTS
@@ -180,16 +181,12 @@ Other than installing dependencies ([TASSEL-GBSv2](https://bitbucket.org/tassela
 
 ## SNP VARIANT AND GENOTYPE FILE OVERVIEW
 
-After running the TASSEL-GBSv2 pipeline as described in the text and the [SNP Discovery Pipeline](#tassel-gbsv2-snp-discovery-pipeline-code) section above, we obtained variant call format (VCF) files 'ref_1_2_finalProductionSNPs.vcf.gz' (final run) and 'ref_3_noTReps_finalProductionSNPs.vcf.gz' (noTReps run) containing the raw production SNP calls output from the pipeline's ProductionSNPCallerPluginV2 plugin. We then filtered these files using vcftools and filtering parameters discussed in the Materials and Methods section of the main text. The resulting filtered VCF file from the final run was then used as the starting point for subsequent analyses. Some of our genetic analyses in ```R``` were baed on reading the filtered VCF files into the ```R``` environment directly. Prior to some of our other ```R``` analyses, however, the data were converted to genotype formats readable by ```R``` software packages ```hierfstat``` (Goudet 2005) and ```adegenet``` (Jombart & Ahmed 2011) discussed in the main text. 
+After running the TASSEL-GBSv2 pipeline as described in the text and the [SNP Discovery Pipeline](#tassel-gbsv2-snp-discovery-pipeline-code) section above, we obtained variant call format (VCF) files 'ref_1_2_finalProductionSNPs.vcf.gz' (final run) and 'ref_3_noTReps_finalProductionSNPs.vcf.gz' (noTReps run) containing the raw production SNP calls output from the pipeline's ProductionSNPCallerPluginV2 plugin. We then filtered these files using vcftools and filtering parameters discussed in the Materials and Methods section of the main text. The resulting filtered VCF file from the final run was then used as the starting point for subsequent analyses. Essentially all of our genetic analyses in ```R``` were baed on reading the filtered VCF files directly into the ```R``` environment and manipulating them there to create other classes of data objects used by various ```R``` software packages such as ```hierfstat``` (Goudet 2005) and ```adegenet``` (Jombart & Ahmed 2011), discussed in the main text. Therefore, we also include a gzipped version of our final filtered VCF file, 'AspenSNPs.33.5K_n183.vcf.gz', in this accession, in the 'SNP_VCF_Data_Files' folder.
 
 ## ENM PIPELINE OVERVIEW
 
 [In prep.]
 
-
-## ADDITIONAL NOTES
-
-[In prep.]
 
 ## REFERENCES
 
